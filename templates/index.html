@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Converter (AD ↔ BS)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Date Converter</h1>
+
+        <!-- AD to BS Conversion Form -->
+        <div class="card">
+            <h2>AD to BS</h2>
+            <form action="/convert_ad_to_bs" method="post">
+                <label for="ad_date">AD Date</label>
+                <input type="text" id="ad_date" name="ad_date" placeholder="YYYY/MM/DD" required>
+                <button type="submit">Convert to BS</button>
+            </form>
+            {% if ad_to_bs %}
+                <p class="result">AD Date <strong>{{ ad_date }}</strong> → BS Date <strong>{{ bs_date }}</strong></p>
+            {% endif %}
+        </div>
+
+        <!-- BS to AD Conversion Form -->
+        <div class="card">
+            <h2>BS to AD</h2>
+            <form action="/convert_bs_to_ad" method="post">
+                <label for="bs_date">BS Date</label>
+                <input type="text" id="bs_date" name="bs_date"  Placeholder="YYYY/MM/DD" required>
+                <button type="submit">Convert to AD</button>
+            </form>
+            {% if bs_to_ad %}
+                <p class="result">BS Date <strong>{{ bs_date }}</strong> → AD Date <strong>{{ ad_date }}</strong></p>
+            {% endif %}
+        </div>
+        <footer>© Copyright 2024 NexGen Innovations Pvt. Ltd.</footer>
+    </div>
+
+<div>
+</div>
+</body>
+</html>
+
+
