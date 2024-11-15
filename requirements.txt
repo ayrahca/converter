@@ -11,3 +11,4 @@ nepali-datetime==1.0.8.3
 requests==2.32.3
 urllib3==2.2.3
 Werkzeug==3.1.3
+gunicorn
