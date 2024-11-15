@@ -51,4 +51,4 @@ def convert_bs_to_ad():
         return render_template('index.html', error_message=error_message)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=Fase,host='0.0.0.0')
